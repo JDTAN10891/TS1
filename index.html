@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; 
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s; 
+        }
+        .dark-mode {
+            background-color: #bc9f7d; 
+            color: white; 
+        }
+        .dark-mode .container {
+            background-color: #a27246;
+            color: white; 
+            transition: background-color 0.5s, color 0.5s; 
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: color 0.5s; 
+        }
+        h1, h2, h3 {
+            color: #333; 
+        }
+        .contact, .education, .experience, .skills {
+            margin-bottom: 20px;
+        }
+        .contact div, .education div, .experience div, .skills div {
+            margin-bottom: 10px;
+        }
+        .contact span, .education span, .experience span, .skills span {
+            font-weight: bold;
+        }
+        .toggle-button {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+        .profile-pic {
+            text-align: center; /* Centers the image */
+            margin-bottom: 20px;
+        }
+        .profile-pic img {
+            width: 150px; /* Sets the width of the image */
+            height: 150px; /* Sets the height of the image */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image fits within the circle */
+            border: 3px solid #333; /* Adds a border around the image */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Picture Container -->
+        <div class="profile-pic">
+            <img src="Pic.jpg" alt="Profile Picture"> <!-- Add your image file here -->
+        </div>
+
+        <h1>Justine Louis D.Tan</h1>
+        <p>Web Developer | Student</p>
+
+        <button class="toggle-button" onclick="toggleBackgroundColor()">Toggle Background Color</button>
+
+        <div class="contact">
+            <h2>Contact Information</h2>
+            <div><span>Email:</span> tanj8582@gmail.com</div>
+            <div><span>Phone:</span> 09089672366</div>
+        </div>
+
+        <div class="education">
+            <h2>Education</h2>
+            <div><span>Elementary to SHS:</span> Manila Cathedral School</div>
+            <div><span>University:</span> FEU Institute of Technology</div>
+            <div><span>Degree:</span> Bachelor of Science in Information Technology</div>
+        </div>
+
+        <div class="skills">
+            <h2>Skills</h2>
+            <div><span>Languages:</span> HTML, CSS, JavaScript, React, Python</div>
+            <div><span>Tools:</span> Github, VS Code, AI Tools</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleBackgroundColor() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
